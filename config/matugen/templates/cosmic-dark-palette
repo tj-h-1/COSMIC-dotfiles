@@ -1,0 +1,41 @@
+Dark((
+    name: "matugen-dark",
+
+    bright_red: "#FFA09AFF",
+    bright_green: "#5EDB8CFF",
+    bright_orange: "#FFA37DFF",
+
+    gray_1: "{{colors.surface.dark.hex}}FF",
+    gray_2: "{{colors.surface_container.dark.hex}}FF",
+
+    neutral_0: "#000000FF",
+    neutral_1: "{{colors.surface.dark.hex}}FF",
+    neutral_2: "{{colors.surface_container_low.dark.hex}}FF",
+    neutral_3: "{{colors.surface_container.dark.hex}}FF",
+    neutral_4: "{{colors.surface_container_high.dark.hex}}FF",
+    neutral_5: "{{colors.surface_container_highest.dark.hex}}FF",
+    neutral_6: "#808080FF",
+    neutral_7: "#9E9E9EFF",
+    neutral_8: "#BEBEBEFF",
+    neutral_9: "#DEDEDEFF",
+    neutral_10: "#FFFFFFFF",
+
+    accent_blue: "{{colors.primary.dark.hex}}FF",
+
+    accent_indigo: "#A1C0EBFF",
+    accent_purple: "#E79CFEFF",
+    accent_pink: "#FF9CB1FF",
+    accent_red: "#FDA1A0FF",
+    accent_orange: "#FFAD00FF",
+    accent_yellow: "#F7E062FF",
+    accent_green: "#92CF9CFF",
+    accent_warm_grey: "#CABAB4FF",
+
+    ext_warm_grey: "#9B8E8AFF",
+    ext_orange: "#FFAD00FF",
+    ext_yellow: "#FEDB40FF",
+    ext_blue: "{{colors.primary.dark.hex}}FF",
+    ext_purple: "#CF7DFFFF",
+    ext_pink: "#F93A83FF",
+    ext_indigo: "#3E88FFFF",
+))

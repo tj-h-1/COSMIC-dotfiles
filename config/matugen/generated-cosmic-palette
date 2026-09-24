@@ -1,0 +1,41 @@
+Dark((
+    name: "matugen-dark",
+
+    bright_red: "#FFA09AFF",
+    bright_green: "#5EDB8CFF",
+    bright_orange: "#FFA37DFF",
+
+    gray_1: "#151218FF",
+    gray_2: "#211f24FF",
+
+    neutral_0: "#000000FF",
+    neutral_1: "#151218FF",
+    neutral_2: "#1d1b20FF",
+    neutral_3: "#211f24FF",
+    neutral_4: "#2c292fFF",
+    neutral_5: "#36343aFF",
+    neutral_6: "#808080FF",
+    neutral_7: "#9E9E9EFF",
+    neutral_8: "#BEBEBEFF",
+    neutral_9: "#DEDEDEFF",
+    neutral_10: "#FFFFFFFF",
+
+    accent_blue: "#d3bcfdFF",
+
+    accent_indigo: "#A1C0EBFF",
+    accent_purple: "#E79CFEFF",
+    accent_pink: "#FF9CB1FF",
+    accent_red: "#FDA1A0FF",
+    accent_orange: "#FFAD00FF",
+    accent_yellow: "#F7E062FF",
+    accent_green: "#92CF9CFF",
+    accent_warm_grey: "#CABAB4FF",
+
+    ext_warm_grey: "#9B8E8AFF",
+    ext_orange: "#FFAD00FF",
+    ext_yellow: "#FEDB40FF",
+    ext_blue: "#d3bcfdFF",
+    ext_purple: "#CF7DFFFF",
+    ext_pink: "#F93A83FF",
+    ext_indigo: "#3E88FFFF",
+))

@@ -1,0 +1,9 @@
+[config]
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty.conf"
+output_path = "~/.config/kitty/matugen.conf"
+
+[templates.cosmic_theme]
+input_path = "~/.config/matugen/templates/cosmic-theme.ron"
+output_path = "~/.config/matugen/generated-cosmic-theme.ron"

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+BACKGROUND="$HOME/.config/cosmic/com.system76.CosmicBackground/v1/all"
+
+if [ ! -f "$BACKGROUND" ]; then
+    echo "Could not find COSMIC wallpaper configuration."
+    exit 1
+fi
+
+WALLPAPER=$(sed -n 's/^[[:space:]]*source: Path("\(.*\)"),/\1/p' "$BACKGROUND")
+
+if [ -z "$WALLPAPER" ]; then
+    echo "Could not detect the current wallpaper."
+    exit 1
+fi
+
+if [ ! -f "$WALLPAPER" ]; then
+    echo "Wallpaper does not exist:"
+    echo "$WALLPAPER"
+    exit 1
+fi
+
+echo "Detected wallpaper:"
+echo "$WALLPAPER"
+echo
+echo "Generating Matugen theme..."
+
+matugen image "$WALLPAPER" -m dark
+
+echo
+echo "Done."
+echo "Kitty colours have been regenerated."
+echo "COSMIC theme: ~/.config/matugen/generated-cosmic-theme.ron"
+echo "Import that file in COSMIC Appearance to apply the new desktop colours."
