@@ -42,21 +42,13 @@ sudo dnf install -y \
 # Matugen
 # ------------------------------------------------------------
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 if command -v matugen >/dev/null 2>&1; then
     echo "Matugen is already installed."
 else
     echo "Installing Matugen..."
-
     cargo install matugen
-
-    export PATH="$HOME/.cargo/bin:$PATH"
-
-    if command -v matugen >/dev/null 2>&1; then
-        echo "Matugen installed successfully."
-    else
-        echo "ERROR: Matugen installation failed."
-        exit 1
-    fi
 fi
 
 # ------------------------------------------------------------
@@ -94,8 +86,11 @@ backup_config fontconfig
 
 echo "Installing COSMIC configuration..."
 
-rm -rf "$HOME/.config/cosmic"
-cp -a "$DOTFILES/config/cosmic" "$HOME/.config/cosmic"
+mkdir -p "$HOME/.config/cosmic"
+
+cp -a \
+    "$DOTFILES/config/cosmic/." \
+    "$HOME/.config/cosmic/"
 
 # ------------------------------------------------------------
 # Kitty

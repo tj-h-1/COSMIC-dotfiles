@@ -1,6 +1,12 @@
 #!/bin/bash
 
+set -e
+
 BACKGROUND="$HOME/.config/cosmic/com.system76.CosmicBackground/v1/all"
+MATUGEN="$HOME/.config/matugen"
+BASE="$MATUGEN/templates/cosmic-fedora-base.ron"
+CONVERTER="$MATUGEN/convert-cosmic.py"
+OUTPUT="$MATUGEN/generated-cosmic-theme.ron"
 
 if [ ! -f "$BACKGROUND" ]; then
     echo "Could not find COSMIC wallpaper configuration."
@@ -20,15 +26,40 @@ if [ ! -f "$WALLPAPER" ]; then
     exit 1
 fi
 
+if [ ! -f "$BASE" ]; then
+    echo "Could not find Fedora COSMIC theme template:"
+    echo "$BASE"
+    exit 1
+fi
+
+if [ ! -f "$CONVERTER" ]; then
+    echo "Could not find COSMIC theme converter:"
+    echo "$CONVERTER"
+    exit 1
+fi
+
 echo "Detected wallpaper:"
 echo "$WALLPAPER"
 echo
-echo "Generating Matugen theme..."
 
+echo "Generating Matugen colours..."
+
+# Generates Kitty's theme.
 matugen image "$WALLPAPER" -m dark
+
+echo
+echo "Generating Fedora COSMIC theme..."
+
+python3 "$CONVERTER" \
+    "$WALLPAPER" \
+    "$BASE" \
+    "$OUTPUT"
 
 echo
 echo "Done."
 echo "Kitty colours have been regenerated."
-echo "COSMIC theme: ~/.config/matugen/generated-cosmic-theme.ron"
-echo "Import that file in COSMIC Appearance to apply the new desktop colours."
+echo
+echo "COSMIC theme:"
+echo "$OUTPUT"
+echo
+echo "Import that file in COSMIC Appearance."
