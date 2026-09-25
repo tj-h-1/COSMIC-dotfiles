@@ -142,7 +142,7 @@ cp -a \
 chmod +x "$HOME/.local/bin/theme"
 
 # ------------------------------------------------------------
-# Optional icon themes
+# Icon themes
 # ------------------------------------------------------------
 
 if [ -d "$DOTFILES/local/share/icons" ]; then
